@@ -76,6 +76,3 @@ https://github.com/jadalaramani/github_actions_project/blob/main/.github/workflo
 2. Go to **Actions** tab in GitHub.
 3. Click on the latest workflow run to see logs.
 4. Check Tomcat Manager or visit `http://<TOMCAT_HOST>:8080/<APP_NAME>` to verify deployment.
-
-Do you want me to do that next?
-
