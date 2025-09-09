@@ -42,7 +42,8 @@ Before starting, ensure the following:
    
 Reference:
 
-``` https://github.com/jadalaramani/github_actions_project/blob/main/.github/workflows/deploy.yaml
+```
+https://github.com/jadalaramani/github_actions_project/blob/main/.github/workflows/deploy.yaml
 ```
 
 ## **4. Workflow Breakdown**
