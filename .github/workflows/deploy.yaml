@@ -25,11 +25,10 @@ jobs:
         run: mvn clean package -DskipTests
 
       - name: Deploy WAR to Tomcat
-       
         run: |
-          WAR_FILE=$(ls target/*.war | head -n 1)
-          echo "Deploying $WAR_FILE to Tomcat..."
-          curl -u tomcat:tomcat \
-            --upload-file "$WAR_FILE" \
-            "http://54.92.193.98:8080/manager/text/deploy?path=/myapp&update=true"
+              WAR_FILE=$(ls target/*.war | head -n 1)
+              APP_NAME=myapp
+              curl -u "${{ secrets.TOMCAT_USERNAME }}:${{ secrets.TOMCAT_PASSWORD }}" \
+                --upload-file "$WAR_FILE" \
+                "http://${{ secrets.TOMCAT_HOST }}:8080/manager/text/deploy?path=/$APP_NAME&update=true"
 
